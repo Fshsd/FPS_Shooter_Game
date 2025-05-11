@@ -43,6 +43,9 @@ MonoBehaviour:
     - ECM2
     - Kybernetik.Animancer
     - Kybernetik.Animancer.FSM
+    - NavMeshComponents
+    - NavMeshComponentsExamples
+    - NavMeshComponentsTestsPlaymode
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
