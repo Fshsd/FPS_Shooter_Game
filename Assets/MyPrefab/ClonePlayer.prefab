@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3576100808524265759
 Transform:
   m_ObjectHideFlags: 0
@@ -690,7 +690,8 @@ MonoBehaviour:
   cloneBulletPrefab: {fileID: 0}
   firstPersonCharacter: {fileID: 3777949854259931496}
   firePoint: {fileID: 8537557710068300516}
-  bulletControl: {fileID: 6500057099988871934, guid: 44680c4ad5eacb641aa07f21a50e1a11, type: 3}
+  camTarget: {fileID: 0}
+  bulletControl: {fileID: 0}
   playerCam: {fileID: 3531519669790283330}
   bulletCam: {fileID: 0}
 --- !u!136 &3218121221684206574
@@ -723,7 +724,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9034632790757521770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a5e05c5b0509214d911dd005a610d9a, type: 3}
   m_Name: 
@@ -818,7 +819,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9034632790757521770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba598d44e33b26849a4d3d6005e49fd1, type: 3}
   m_Name: 

@@ -150,5 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clonePrefab: {fileID: 9034632790757521770, guid: 18c2ea3e5c16d7342930b948f3f0ce59, type: 3}
+  autoUncloneTime: 5
+  bulletShooter: {fileID: 0}
   initialSpeed: 20
   player: {fileID: 0}

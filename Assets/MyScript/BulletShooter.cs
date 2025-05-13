@@ -69,6 +69,10 @@ public class BulletShooter : MonoBehaviour
 
     }
 
+    public void ResetCloneShoot()
+    {
+        canSpawnClone = true;
+    }
 
     public void ResetShoot()
     {
