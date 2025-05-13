@@ -75,10 +75,9 @@ void OnCollisionEnter(Collision collision)
     if (bulletCam) bulletCam.gameObject.SetActive(false);
 
     // إعادة تمكين الـ BulletShooter
-    bulletShooter.ResetShoot();
-
     // تدمير الطلقة
     Destroy(gameObject);
+    bulletShooter.ResetShoot();
 }
 
 

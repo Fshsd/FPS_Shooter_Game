@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "FPS_Shooter_Game.sln"
+    "dotnet.defaultSolution": "TestEnemy.sln"
 }

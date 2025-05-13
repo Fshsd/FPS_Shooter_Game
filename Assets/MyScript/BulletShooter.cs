@@ -1,9 +1,12 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using ECM2.Examples.FirstPerson;
 
 public class BulletShooter : MonoBehaviour
 {
     public GameObject bulletPrefab;
+
+    public FirstPersonCharacter firstPersonCharacter;
     public Transform firePoint;
 
     public BulletControl bulletControl;
@@ -17,6 +20,9 @@ void Update()
 {
     if (canShoot && Input.GetMouseButtonDown(0))
     {
+        firstPersonCharacter.enabled = false;
+        // Disable shooting until the next shot
+        canShoot = false;
         // Instantiate the bullet
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
@@ -35,14 +41,14 @@ void Update()
             bulletControlScript.ResetSpeed();
         }
 
-        // Disable shooting until the next shot
-        canShoot = false;
+        
     }
 }
 
 
     public void ResetShoot()
     {
+        firstPersonCharacter.enabled = true;
         canShoot = true;
     }
 }
