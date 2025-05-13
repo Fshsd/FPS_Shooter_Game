@@ -106,7 +106,7 @@ MonoBehaviour:
   initialSpeed: 20
   minSpeed: 10
   decelerationRate: 5
-  moveSpeed: 90
+  moveSpeed: 10
   autoExplodeTime: 5
   explosionEffect: {fileID: 3837892007386036936, guid: 21ba008715472f84292dbf30d3157fe8, type: 3}
   player: {fileID: 1368609255813393331, guid: 09b52cae123067e4b813186e5d768a84, type: 3}
