@@ -35,6 +35,12 @@ public class ProjectileGun : MonoBehaviour
     private void Update()
     {
         MyInput();
+
+        //Set ammo display , if it exists
+        if (ammunitionDisplay != null)
+        {
+            ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " +magazineSize / bulletsPerTap);
+        }
     }
 
     private void MyInput()
@@ -103,9 +109,12 @@ public class ProjectileGun : MonoBehaviour
 
         //Add forces to bullet
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce , ForceMode.Impulse);
-        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * shootForce , ForceMode.Impulse);
 
-
+        //Instantiate muzzle flash , if you have one
+        if (muzzleFlash != null)
+        {
+            Instantiate(muzzleFlash , attackPoint.position , Quaternion.identity);
+        }
 
        bulletsLeft--;
        bulletsShot++;

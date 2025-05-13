@@ -162,9 +162,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &5157733182505899136
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,8 +222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5349846046789551021}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.062137287, y: 0, z: 0, w: 0.9980677}
-  m_LocalPosition: {x: 0.23835433, y: 0.20502937, z: -10.103451}
+  m_LocalRotation: {x: -0.062137287, y: -0, z: -0, w: 0.9980677}
+  m_LocalPosition: {x: 0.19243121, y: 0.20502925, z: -10.103451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -297,7 +297,7 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
   TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 1, y: 1, z: 1}
+  Damping: {x: 0, y: 0, z: 0}
   Lookahead:
     Enabled: 0
     Time: 0
