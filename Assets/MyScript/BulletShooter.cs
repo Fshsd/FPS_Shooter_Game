@@ -10,6 +10,8 @@ public class BulletShooter : MonoBehaviour
     public FirstPersonCharacter firstPersonCharacter;
     public Transform firePoint;
 
+    public Transform camTarget;
+
     public BulletControl bulletControl;
 
     public CinemachineCamera playerCam;
@@ -27,6 +29,21 @@ public class BulletShooter : MonoBehaviour
         {
             canSpawnClone = false;
             GameObject bullet = Instantiate(cloneBulletPrefab, firePoint.position, firePoint.rotation);
+
+            Ray ray = playerCam.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Vector3 targetDirection;
+
+            if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+            {
+                targetDirection = (hit.point - firePoint.position).normalized;
+            }
+            else
+            {
+                targetDirection = ray.direction;
+            }
+
+            // توجيه الطلقة نحو هدف التصويب
+            bullet.transform.forward = targetDirection;
             // لو بغيت تتحكم فيها بكاميرا مثلاً أضف نفس خطوات الكاميرا
         }
 
@@ -37,6 +54,29 @@ public class BulletShooter : MonoBehaviour
             canShoot = false;
             // Instantiate the bullet
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+            Ray ray = playerCam.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            Vector3 targetDirection;
+
+            if (Physics.Raycast(ray, out RaycastHit hit, 1000f))
+            {
+                targetDirection = (hit.point - firePoint.position).normalized;
+            }
+            else
+            {
+                targetDirection = ray.direction;
+            }
+
+            // توجيه الطلقة نحو هدف التصويب
+            bullet.transform.forward = targetDirection;
+
+            // bulletCam.transform.SetParent(null);
+
+            // camTarget = bullet.transform.Find("BulletCamTarget");
+
+            // camTarget.position = playerCam.transform.position;
+            // camTarget.rotation = playerCam.transform.rotation;
+
 
             // Activate bullet camera and deactivate player camera
             bulletCam.gameObject.SetActive(true);

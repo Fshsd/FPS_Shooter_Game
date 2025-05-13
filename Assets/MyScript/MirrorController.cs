@@ -16,6 +16,10 @@ public class MirrorController : MonoBehaviour
         if (originalPlayer == null || cloneCharacter == null)
             return;
 
+            
+
+        if (originalPlayer.enabled == true)
+        {
         // احصل على مدخلات اللاعب الأصلية
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
@@ -27,6 +31,8 @@ public class MirrorController : MonoBehaviour
         Vector3 worldDirection = transform.TransformDirection(inputDirection).normalized;
 
         // تمرير الحركة إلى النسخة
-        cloneCharacter.SetMovementDirection(worldDirection);
+        cloneCharacter.SetMovementDirection(worldDirection);      
+        }
+
     }
 }

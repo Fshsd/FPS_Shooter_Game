@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3699672912889048509}
   - component: {fileID: 331700111737210035}
   - component: {fileID: 599309097888954305}
+  - component: {fileID: 6500057099988871934}
   - component: {fileID: 6152701499112728361}
   - component: {fileID: 4508989547620496566}
-  - component: {fileID: 6500057099988871934}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5904757226004576755}
-  - {fileID: 3099163067841521163}
+  - {fileID: 1548131837466504399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &331700111737210035
@@ -91,6 +91,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6500057099988871934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270305430503992546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9021669761608344b9e3a0e1959f7948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSpeed: 20
+  minSpeed: 10
+  decelerationRate: 5
+  moveSpeed: 90
+  autoExplodeTime: 5
+  explosionEffect: {fileID: 3837892007386036936, guid: 21ba008715472f84292dbf30d3157fe8, type: 3}
+  player: {fileID: 1368609255813393331, guid: 09b52cae123067e4b813186e5d768a84, type: 3}
+  playerCam: {fileID: 0}
+  bulletCam: {fileID: 0}
+  bulletShooter: {fileID: 0}
+  camTarget: {fileID: 0}
+  rotationSpeed: 20
+  smoothTime: 10
+  bulletCamTarget: {fileID: 0}
 --- !u!135 &6152701499112728361
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -139,27 +165,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6500057099988871934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270305430503992546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9021669761608344b9e3a0e1959f7948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialSpeed: 20
-  minSpeed: 5
-  decelerationRate: 5
-  moveSpeed: 10
-  explosionEffect: {fileID: 3837892007386036936, guid: 21ba008715472f84292dbf30d3157fe8, type: 3}
-  player: {fileID: 1368609255813393331, guid: 09b52cae123067e4b813186e5d768a84, type: 3}
-  playerCam: {fileID: 0}
-  bulletCam: {fileID: 0}
-  bulletShooter: {fileID: 0}
 --- !u!1 &5157733182505899136
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5904757226004576755
 Transform:
   m_ObjectHideFlags: 0
@@ -185,13 +190,13 @@ Transform:
   m_GameObject: {fileID: 5157733182505899136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3699672912889048509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8275274999636808837
+--- !u!1 &5349846046789551021
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,10 +204,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3099163067841521163}
-  - component: {fileID: 1214303629582880213}
-  - component: {fileID: 3210399341420412560}
-  - component: {fileID: 4754425904469622432}
+  - component: {fileID: 1548131837466504399}
+  - component: {fileID: 1507433397889447339}
+  - component: {fileID: 8981285463206215153}
   m_Layer: 0
   m_Name: BulletCam
   m_TagString: Untagged
@@ -210,28 +214,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3099163067841521163
+--- !u!4 &1548131837466504399
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275274999636808837}
+  m_GameObject: {fileID: 5349846046789551021}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.049813703, y: 0, z: 0, w: 0.99875855}
-  m_LocalPosition: {x: 0, y: 0, z: -5.95}
+  m_LocalRotation: {x: -0.062137287, y: 0, z: 0, w: 0.9980677}
+  m_LocalPosition: {x: 0.23835433, y: 0.20502937, z: -10.103451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3699672912889048509}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1214303629582880213
+  m_LocalEulerAnglesHint: {x: -7.125, y: 0, z: 0}
+--- !u!114 &1507433397889447339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275274999636808837}
+  m_GameObject: {fileID: 5349846046789551021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
@@ -239,13 +243,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 3
+    m_Value: 2
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 5904757226004576755}
+    TrackingTarget: {fileID: 3699672912889048509}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -268,35 +272,34 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &3210399341420412560
+--- !u!114 &8981285463206215153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275274999636808837}
+  m_GameObject: {fileID: 5349846046789551021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtOffset: {x: 0, y: 1, z: 0}
---- !u!114 &4754425904469622432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8275274999636808837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 2, y: 2, z: 2}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
+  CameraDistance: 10
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: -0.007999957, y: 0.12614715}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 1, y: 1, z: 1}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0

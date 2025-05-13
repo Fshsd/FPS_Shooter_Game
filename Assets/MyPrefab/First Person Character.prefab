@@ -327,8 +327,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1270305430503992546, guid: 44680c4ad5eacb641aa07f21a50e1a11, type: 3}
+  cloneBulletPrefab: {fileID: 8986686103101094440, guid: 1bba40430874f7d43b473ea09342f453, type: 3}
   firstPersonCharacter: {fileID: 7948299021256320890}
   firePoint: {fileID: 2036069773110296772}
+  camTarget: {fileID: 0}
   bulletControl: {fileID: 6500057099988871934, guid: 44680c4ad5eacb641aa07f21a50e1a11, type: 3}
   playerCam: {fileID: 5678449444401768954}
   bulletCam: {fileID: 0}
@@ -764,7 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Priority:
     Enabled: 1
-    m_Value: 1
+    m_Value: 2
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
