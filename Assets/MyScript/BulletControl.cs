@@ -1,5 +1,6 @@
 using UnityEngine;
 using Unity.Cinemachine;
+using Unity.Mathematics;
 
 
 public class BulletControl : MonoBehaviour
@@ -9,6 +10,8 @@ public class BulletControl : MonoBehaviour
     public float decelerationRate = 5f;
     public float moveSpeed = 5f;
     public GameObject explosionEffect;
+
+    public GameObject player;
     private float currentSpeed;
 
     private Rigidbody rb;
@@ -25,6 +28,7 @@ public class BulletControl : MonoBehaviour
     {
          rb = GetComponent<Rigidbody>();
         bulletCam = GameObject.Find("BulletCam").GetComponent<CinemachineCamera>();
+        // player = GameObject.Find("First Person Character");
         playerCam = GameObject.Find("PlayerCamera").GetComponent<CinemachineCamera>();
         bulletShooter = GameObject.Find("First Person Character").GetComponent<BulletShooter>();
 
@@ -67,7 +71,6 @@ void OnCollisionEnter(Collision collision)
 {
     if (explosionEffect)
         Instantiate(explosionEffect, transform.position, Quaternion.identity);
-
     // إعادة تفعيل كاميرا اللاعب
     if (playerCam) playerCam.gameObject.SetActive(true);
 
