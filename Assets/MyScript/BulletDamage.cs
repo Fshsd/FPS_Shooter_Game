@@ -12,9 +12,12 @@ public class BulletDamage : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            SoundManager.Instance.PlaySound("damage");
         }else if (player != null)
         {
             player.TakeDamage(damage);
+            SoundManager.Instance.PlaySound("damage");
+
         }
 
         // دمر الطلقة بعد الاصطدام

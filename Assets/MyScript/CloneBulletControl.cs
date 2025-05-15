@@ -1,5 +1,6 @@
 using UnityEngine;
 using ECM2.Examples.FirstPerson;
+using Unity.VisualScripting;
 
 
 public class CloneBulletControl : MonoBehaviour
@@ -34,7 +35,7 @@ public class CloneBulletControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
 
     }
 

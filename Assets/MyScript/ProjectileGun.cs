@@ -41,6 +41,11 @@ public class ProjectileGun : MonoBehaviour
         {
             ammunitionDisplay.SetText(bulletsLeft / bulletsPerTap + " / " +magazineSize / bulletsPerTap);
         }
+        if (reloading == true)
+        {
+            ammunitionDisplay.SetText(" Reloading..");
+
+        }
     }
 
     private void MyInput()
@@ -104,6 +109,8 @@ public class ProjectileGun : MonoBehaviour
 
         //Instantoate bullet/projectile
         GameObject currentBullet = Instantiate(bullet , attackPoint.position , Quaternion.identity);
+        SoundManager.Instance.PlaySound("shoot");
+
         //Rotate bullet to shoot direction
         currentBullet.transform.forward = directionWithSpread.normalized;
 
@@ -144,6 +151,7 @@ public class ProjectileGun : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        SoundManager.Instance.PlaySound("reload");
         Invoke("ReloadFinished" , reloadTime);
     }
 

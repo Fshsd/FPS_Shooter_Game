@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class PuzzleClone : MonoBehaviour
+public class PuzzleClone2 : MonoBehaviour
 {
 
     [SerializeField] private Animator CubeDown;
-    [SerializeField] private GameObject Glass;
+    [SerializeField] private GameObject RIP;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,8 +22,8 @@ void OnTriggerEnter(Collider other)
     CubeDown.SetBool("CubeDown", true);
     SoundManager.Instance.PlaySound("cloneTarget");
 
-    Destroy(Glass);
-    SoundManager.Instance.PlaySound("glass");
+        RIP.SetActive(true);
+    SoundManager.Instance.PlaySound("earthquake");
 
     
 }

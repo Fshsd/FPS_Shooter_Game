@@ -18,6 +18,8 @@ public class HitButton : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        SoundManager.Instance.PlaySound("hitTarget");
         OpenDoor.SetBool("OpenDoor" , true);
+        SoundManager.Instance.PlaySound("opendoor");
     }
 }
