@@ -11,7 +11,7 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: WhatIsGrounded
     cost: 1
   - name: 
     cost: 1
@@ -69,14 +69,14 @@ NavMeshProjectSettings:
     cost: 1
   - name: 
     cost: 1
-  m_LastAgentTypeID: -887442657
+  m_LastAgentTypeID: -334000983
   m_Settings:
   - serializedVersion: 3
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2.92
+    agentRadius: 0.18
+    agentHeight: 0.86
     agentSlope: 60
-    agentClimb: 1.35
+    agentClimb: 0.54
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2

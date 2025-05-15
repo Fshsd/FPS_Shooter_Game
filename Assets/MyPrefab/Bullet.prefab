@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9021669761608344b9e3a0e1959f7948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 30
-  minSpeed: 20
+  initialSpeed: 20
+  minSpeed: 15
   decelerationRate: 5
   moveSpeed: 20
   autoExplodeTime: 5
@@ -114,9 +114,13 @@ MonoBehaviour:
   bulletCam: {fileID: 0}
   bulletShooter: {fileID: 0}
   camTarget: {fileID: 0}
-  rotationSpeed: 20
+  mouseSensitivity: 5
+  rotationSpeed: 40
   smoothTime: 10
   bulletCamTarget: {fileID: 0}
+  slowMotionTimeScale: 0.1
+  normalTimeScale: 1
+  slowMotionDuration: 3
 --- !u!135 &6152701499112728361
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -136,7 +140,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4508989547620496566
 Rigidbody:
@@ -223,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 5349846046789551021}
   serializedVersion: 2
   m_LocalRotation: {x: -0.062137287, y: -0, z: -0, w: 0.9980677}
-  m_LocalPosition: {x: 0.19243121, y: 0.20502925, z: -10.103451}
+  m_LocalPosition: {x: 0.20170891, y: 0.20502937, z: -10.103451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

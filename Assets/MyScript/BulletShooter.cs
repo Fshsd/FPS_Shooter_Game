@@ -20,19 +20,32 @@ public class BulletShooter : MonoBehaviour
     private bool canShoot = true;
     private bool canSpawnClone = true;
 
+    private bool whatIsWeapon = false;
+
 
 
     void Update()
     {
 
-        if (canSpawnClone && Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (whatIsWeapon)
+            {
+                whatIsWeapon = false;
+            }else
+            {
+                whatIsWeapon = true;
+            }
+        }
+
+        if (canSpawnClone && Input.GetMouseButtonDown(1) && whatIsWeapon)
         {
             canSpawnClone = false;
             GameObject bullet = Instantiate(cloneBulletPrefab, firePoint.position, firePoint.rotation);
             // لو بغيت تتحكم فيها بكاميرا مثلاً أضف نفس خطوات الكاميرا
         }
 
-        if (canShoot && Input.GetMouseButtonDown(0))
+        if (canShoot && Input.GetMouseButtonDown(1) && whatIsWeapon == false) 
         {
             firstPersonCharacter.enabled = false;
             // Disable shooting until the next shot

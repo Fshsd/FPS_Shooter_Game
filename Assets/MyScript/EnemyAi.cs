@@ -20,6 +20,7 @@ public class EnemyAi : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public GameObject projectile;
+    public Transform attackPoint;
 
     //States
     public float sightRange , attackRange;
@@ -88,8 +89,8 @@ public class EnemyAi : MonoBehaviour
         if (!alreadyAttacked)
         {
             //Attack code here
-            // rb = Instantiate(projectile , transform.position , Quaternion.identity).GetComponent<Rigidbody>();
-            // rb.AddForce(transform.forward * 32f , ForceMode.Impulse);
+            rb = Instantiate(projectile , attackPoint.position , Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f , ForceMode.Impulse);
             // rb.AddForce(transform.up * 8f , ForceMode.Impulse);
 
 

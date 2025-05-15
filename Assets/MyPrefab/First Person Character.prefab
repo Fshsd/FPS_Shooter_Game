@@ -804,6 +804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2554052676623133426}
+  - component: {fileID: 1232352952766573304}
   m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
@@ -831,6 +832,33 @@ Transform:
   - {fileID: 2036069773110296772}
   m_Father: {fileID: 956016886562092915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232352952766573304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439090906530937302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f545561b777dc440ac8b69fb49b1a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2672465196084824673, guid: 4e6e40e6f205d1f40b4dd0b9a31afeb4, type: 3}
+  shootForce: 100
+  upwardForce: 0
+  timeBetweenShooting: 0.1
+  spread: 0
+  reloadTime: 1.5
+  timeBetweenShots: 0
+  magazineSize: 100
+  bulletsPerTap: 1
+  allowButtonHold: 1
+  fpsCam: {fileID: 0}
+  attackPoint: {fileID: 2036069773110296772}
+  muzzleFlash: {fileID: 0}
+  ammunitionDisplay: {fileID: 0}
+  allowInvoke: 1
 --- !u!1001 &7878186430332113173
 PrefabInstance:
   m_ObjectHideFlags: 0
