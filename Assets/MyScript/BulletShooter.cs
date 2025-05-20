@@ -71,7 +71,7 @@ public class BulletShooter : MonoBehaviour
             // Disable shooting until the next shot
             canShoot = false;
             // Instantiate the bullet
-            SoundManager.Instance.PlaySound("bullet");
+            SoundManager.Instance.PlaySoundLoop("bullet");
 
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
@@ -138,5 +138,6 @@ IEnumerator CloneCooldown()
     {
         firstPersonCharacter.enabled = true;
         canShoot = true;
+        SoundManager.Instance.StopSoundLoop();
     }
 }

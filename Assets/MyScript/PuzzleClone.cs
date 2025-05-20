@@ -17,13 +17,14 @@ public class PuzzleClone : MonoBehaviour
         
     }
 
-void OnTriggerEnter(Collider other)
-{
-    CubeDown.SetBool("CubeDown", true);
-    SoundManager.Instance.PlaySound("cloneTarget");
+    void OnTriggerEnter(Collider other)
+    {
+        CubeDown.SetBool("CubeDown", true);
+        SoundManager.Instance.PlaySound("cloneTarget");
 
-    Destroy(Glass);
-    SoundManager.Instance.PlaySound("glass");
+        Destroy(Glass);
+        SoundManager.Instance.PlaySound("glass");
+        Destroy(gameObject);
 
     
 }

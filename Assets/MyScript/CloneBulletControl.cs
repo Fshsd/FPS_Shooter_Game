@@ -16,6 +16,7 @@ public class CloneBulletControl : MonoBehaviour
 
 
     public GameObject player;
+    private bool hasCloned = false; // <-- هنا أضفنا الفلتر
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -41,9 +42,11 @@ public class CloneBulletControl : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (hasCloned) return;
+
+        hasCloned = true;
         Cloning();
         Destroy(gameObject);
-
     }
 
     

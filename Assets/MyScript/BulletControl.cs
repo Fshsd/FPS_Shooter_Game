@@ -154,6 +154,7 @@ private bool isInSlowMotion = false;     // لتتبع حالة السلوموش
     void Explode()
     {
         if (explosionEffect)
+            SoundManager.Instance.PlaySound("boom");
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         // إعادة تفعيل كاميرا اللاعب
         if (playerCam) playerCam.gameObject.SetActive(true);

@@ -17,6 +17,8 @@ public class RIP : MonoBehaviour
 
     [SerializeField] private Transform player;
 
+        [SerializeField] private GameObject playerObj;
+
 
     [SerializeField] private CinemachineCamera playerCam;
 
@@ -54,6 +56,7 @@ public class RIP : MonoBehaviour
         // interactUI.SetActive(false);
 
         //change cam
+        playerObj.SetActive(false);
         playerCam.gameObject.SetActive(false);
 
         RIPCam.gameObject.SetActive(true);
